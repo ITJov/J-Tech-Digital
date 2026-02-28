@@ -57,7 +57,6 @@ const Navbar = () => {
                                 <li><a data-link href="#top" className="text-gray-500 hover:text-black">Home</a></li>
                                 <li><a data-link href="#about" className="text-gray-500 hover:text-black">About</a></li>
                                 <li><a data-link href="#services" className="text-gray-500 hover:text-black">Services</a></li>
-                                <li><a data-link href="#contact" className="text-gray-500 hover:text-black">Contact</a></li>
                             </ul>
 
                             <div className="flex items-center gap-4 pl-6 border-l border-gray-300">
@@ -66,10 +65,10 @@ const Navbar = () => {
                                 </button>
 
                                 <a
-                                    href="#contact"
+                                    href="/login"
                                     className="flex items-center gap-2 px-5 py-2.5 border border-gray-400 rounded-full"
                                 >
-                                    Contact
+                                    Demo
                                     <Image src={assets.arrow_icon} alt="" className="w-3" />
                                 </a>
                             </div>

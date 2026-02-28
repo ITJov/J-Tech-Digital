@@ -1,9 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { assets } from "@/assets/assets";
-import ovo from "@/components/utils";
 import Link from "next/link";
+import { assets } from "@/assets/assets";
 
 const LoginPage = () => {
     const [username, setUsername] = useState("");
@@ -17,37 +16,22 @@ const LoginPage = () => {
         setLoading(true);
 
         try {
-            const res = await fetch("http://202.10.48.104/api/method/login", {
+            const res = await fetch("https://app.athena-erp.cloud/api/method/login", {
                 method: "POST",
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
-                },
-                credentials: "include",
-                body: JSON.stringify({
-                    usr: username,
-                    pwd: password,
-                }),
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ usr: username, pwd: password }),
+                credentials: "include", // penting, biar browser dapet sid
+                redirect: "manual", // jangan auto redirect
             });
 
-            let data;
-            const contentType = res.headers.get("content-type");
-
-            if (contentType && contentType.includes("application/json")) {
-                data = await res.json();
+            // Jika status 200 → login berhasil
+            if (res.status === 200) {
+                window.location.href = "https://app.athena-erp.cloud/app/home";
             } else {
-                const text = await res.text();
-                console.error("Non-JSON response:", text);
-                throw new Error("Internal server error");
-            }
-
-            if (res.ok && data.message === "Logged In") {
-                window.location.href = "http://202.10.48.104/app/home";
-            } else {
-                setError(data.message || "Login failed");
+                setError("Wrong username or password");
             }
         } catch (err) {
-            console.error("Login error:", err);
+            console.error(err);
             setError("Something went wrong. Please try again.");
         } finally {
             setLoading(false);
@@ -56,8 +40,6 @@ const LoginPage = () => {
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-12">
-
-            {/* ✅ Brand Title */}
             <div className="mb-6">
                 <Link href="/">
                     <Image
@@ -70,19 +52,15 @@ const LoginPage = () => {
             </div>
 
             <div className="w-full max-w-md bg-white shadow-xl rounded-xl p-8">
-
                 <h2 className="text-3xl font-bold text-gray-800 mb-2">Welcome Back</h2>
-                <p className={`text-gray-600 mb-6`}>
-                    Log in to access your ERP App
-                </p>
+                <p className="text-gray-600 mb-6">Log in to access your ERP App</p>
 
                 <form onSubmit={handleLogin} className="space-y-5">
                     <div>
-                        <label htmlFor="username" className="block text-sm font-medium text-gray-700">
+                        <label className="block text-sm font-medium text-gray-700">
                             Email address
                         </label>
                         <input
-                            id="username"
                             type="text"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
@@ -92,11 +70,10 @@ const LoginPage = () => {
                     </div>
 
                     <div>
-                        <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                        <label className="block text-sm font-medium text-gray-700">
                             Password
                         </label>
                         <input
-                            id="password"
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
@@ -115,30 +92,21 @@ const LoginPage = () => {
                         type="submit"
                         disabled={loading}
                         className={`w-full py-2 px-4 bg-black text-white font-semibold rounded-md transition cursor-pointer 
-                    ${loading ? "opacity-60 cursor-not-allowed" : "hover:bg-gray-800"}`}
+              ${loading ? "opacity-60 cursor-not-allowed" : "hover:bg-gray-800"}`}
                     >
-                        {loading ? (
-                            <div className="flex items-center justify-center gap-2">
-                                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                Processing...
-                            </div>
-                        ) : (
-                            "Sign In"
-                        )}
+                        {loading ? "Processing..." : "Sign In"}
                     </button>
                 </form>
 
                 <p className="mt-6 text-sm text-gray-600 text-center">
                     Don’t have an account?{" "}
-                    <a href="/signup" className="text-orange-600 hover:underline font-medium">
+                    <Link href="/signup" className="text-orange-600 hover:underline font-medium">
                         Sign Up
-                    </a>
+                    </Link>
                 </p>
             </div>
         </div>
     );
-
-
 };
 
 export default LoginPage;

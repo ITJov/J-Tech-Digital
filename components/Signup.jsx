@@ -20,7 +20,7 @@ export default function SignupPage() {
         setLoading(true);
 
         try {
-            const res = await fetch("http://202.10.48.104/api/method/athena.athena.addon.signup.signup", {
+            const res = await fetch("https://app.athena-erp.cloud/api/method/athena.athena.addon.signup.signup", {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
@@ -60,7 +60,7 @@ export default function SignupPage() {
                 setSuccess("Account created! Redirecting...");
 
                 // ✅ Auto login
-                await fetch("http://202.10.48.104/api/method/login", {
+                await fetch("https://app.athena-erp.cloud/api/method/login", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     credentials: "include",
@@ -70,7 +70,7 @@ export default function SignupPage() {
                     }),
                 });
 
-                window.location.href = "http://202.10.48.104/app/home";
+                window.location.href = "https://app.athena-erp.cloud/app/home";
             } else {
                 setError(data.message?.message || "Signup failed");
             }

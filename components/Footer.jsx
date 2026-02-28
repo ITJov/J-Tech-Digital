@@ -1,5 +1,7 @@
 import React from "react";
 import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import Image from "next/image";
+import { assets } from "@/assets/assets";
 
 const Footer = () => {
     return (
@@ -7,7 +9,11 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                 {/* Logo / Brand */}
                 <div className="text-center md:text-left">
-                    <h3 className="text-2xl font-bold">Athena<span className="text-orange-600">.</span></h3>
+                    <Image
+                        src={assets.new_logo_light}
+                        alt="logo"
+                        className="w-21 cursor-pointer shrink-0"
+                    />
                     <p className="text-sm text-gray-400 mt-1">
                         Empowering businesses with ERPNext solutions.
                     </p>

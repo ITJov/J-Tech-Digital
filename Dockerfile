@@ -3,37 +3,32 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
+# Install deps dulu biar cache optimal
+COPY package.json package-lock.json* ./
+
+RUN npm ci
+
 # Copy source
 COPY . .
 
-# Install deps
-RUN npm install
-
-# Build Next.js
+# Build standalone
 RUN npm run build
 
 
-# -------- Runner / Production --------
+# -------- Runner --------
 FROM node:18-alpine
 
 WORKDIR /app
 
-# Install PM2 for process management
-RUN npm install -g pm2
-
-# Default ENV (prevent NaN crash)
 ENV NODE_ENV=production
 ENV PORT=3000
 ENV NODE_OPTIONS="--max-old-space-size=256"
 
-# Copy build output & deps
-COPY --from=builder /app/package.json ./
-COPY --from=builder /app/.next ./.next
+# Copy standalone output (INI KUNCI NYA)
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/next.config.mjs ./next.config.mjs
 
 EXPOSE 3000
 
-# Start with PM2 (auto-restart if crash)
-CMD ["pm2-runtime", "npm", "--name", "nextjs", "--", "start"]
+CMD ["node", "server.js"]

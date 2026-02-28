@@ -203,9 +203,9 @@ const Header = () => {
                                 <ContactItem
                                     icon={<FaEnvelope />}
                                     title="Email"
-                                    desc="adityayudhaperdana21@gmail.com"
+                                    desc="athenasolution.sales@gmail.com"
                                     action="Email"
-                                    href="mailto:adityayudhaperdana21@gmail.com"
+                                    href="mailto:athenasolution.sales@gmail.com"
                                 />
 
                                 <ContactItem
@@ -213,15 +213,15 @@ const Header = () => {
                                     title="WhatsApp"
                                     desc="Chat langsung dengan kami"
                                     action="WhatsApp"
-                                    href="https://wa.me/6282334468710"
+                                    href="https://wa.me/6287777430262"
                                 />
 
                                 <ContactItem
                                     icon={<FaPhoneAlt />}
                                     title="Telepon"
-                                    desc="+62 823-3446-8710"
+                                    desc="+62 877-7743-0262"
                                     action="Telepon"
-                                    href="tel:+6282334468710"
+                                    href="tel:+6287777430262"
                                 />
                             </div>
                         </motion.div>

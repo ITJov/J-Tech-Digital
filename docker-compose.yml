@@ -1,3 +1,5 @@
+version: "3.8"
+
 services:
   nextjs:
     container_name: nextjs
@@ -7,13 +9,4 @@ services:
     restart: unless-stopped
     env_file:
       - .env.production
-<<<<<<< HEAD
     mem_limit: 400m
-=======
-
-    healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost:3000"]
-      interval: 10s
-      timeout: 3s
-      retries: 5
->>>>>>> 05c27fed3d980d0aafe7d777c1a8cff94cffb59c

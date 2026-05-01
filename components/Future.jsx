@@ -18,23 +18,23 @@ const FEATURES = [
     {
         key: "accounting",
         label: "Accounting",
-        title: "Kontrol keuangan bisnis dengan sistem akuntansi otomatis",
-        desc: "Permudah pengelolaan keuangan bisnis melalui pencatatan otomatis dan laporan instan.",
+        title: "Control business finances with automated accounting systems",
+        desc: "Streamline business financial management through automated recording and instant reporting.",
         image: FaChartLine,
         points: [
             {
                 title: "Automated Journal Entries",
-                desc: "Semua transaksi tercatat otomatis.",
+                desc: "All transactions are recorded automatically.",
                 icon: FaFileInvoiceDollar,
             },
             {
                 title: "Accurate Financial Reports",
-                desc: "Neraca, Laba Rugi, Arus Kas real-time.",
+                desc: "Real-time Balance Sheets, Profit & Loss, and Cash Flow.",
                 icon: FaBalanceScale,
             },
             {
                 title: "Real-Time Monitoring",
-                desc: "Pantau keuangan via dashboard.",
+                desc: "Monitor finances via an interactive dashboard.",
                 icon: FaChartLine,
             },
         ],
@@ -42,23 +42,23 @@ const FEATURES = [
     {
         key: "sales",
         label: "Sales",
-        title: "Kelola prospek hingga closing",
-        desc: "Optimalkan pipeline penjualan.",
+        title: "Manage prospects from lead to closing",
+        desc: "Optimize your sales pipeline for maximum efficiency.",
         image: FaShoppingCart,
         points: [
             {
                 title: "Integrated Sales Data",
-                desc: "Lead hingga invoice terhubung.",
+                desc: "Seamlessly connect leads to invoices.",
                 icon: FaShoppingCart,
             },
             {
                 title: "Pipeline Management",
-                desc: "Pantau setiap tahapan.",
+                desc: "Monitor every stage of the sales process.",
                 icon: FaChartLine,
             },
             {
                 title: "Sales Report",
-                desc: "Dashboard penjualan akurat.",
+                desc: "Highly accurate sales performance dashboards.",
                 icon: FaFileInvoiceDollar,
             },
         ],
@@ -66,23 +66,23 @@ const FEATURES = [
     {
         key: "inventory",
         label: "Inventory",
-        title: "Visibilitas penuh stok",
-        desc: "Kontrol inventaris real-time.",
+        title: "Full stock visibility",
+        desc: "Control your inventory with real-time tracking.",
         image: FaBoxes,
         points: [
             {
                 title: "Automated Stock Movement",
-                desc: "Mutasi stok otomatis.",
+                desc: "Automatic stock mutation tracking.",
                 icon: FaBoxes,
             },
             {
                 title: "Stock Control",
-                desc: "Hindari overstock & stockout.",
+                desc: "Prevent overstocking and stockouts.",
                 icon: FaWarehouse,
             },
             {
                 title: "Warehouse Integration",
-                desc: "Multi warehouse.",
+                desc: "Support for multi-warehouse management.",
                 icon: FaWarehouse,
             },
         ],
@@ -90,23 +90,23 @@ const FEATURES = [
     {
         key: "purchasing",
         label: "Purchasing",
-        title: "Pengadaan lebih efisien",
-        desc: "Automasi proses pembelian.",
+        title: "More efficient procurement",
+        desc: "Automate your purchasing workflows.",
         image: FaMoneyCheckAlt,
         points: [
             {
                 title: "Purchase Automation",
-                desc: "PR, PO, approval terintegrasi.",
+                desc: "Integrated PR, PO, and approval systems.",
                 icon: FaMoneyCheckAlt,
             },
             {
                 title: "Budget Control",
-                desc: "Kontrol biaya real-time.",
+                desc: "Real-time cost and expenditure control.",
                 icon: FaBalanceScale,
             },
             {
                 title: "Vendor Management",
-                desc: "Data vendor rapi.",
+                desc: "Organized and centralized vendor data.",
                 icon: FaUsers,
             },
         ],
@@ -114,23 +114,23 @@ const FEATURES = [
     {
         key: "hrm",
         label: "HRM",
-        title: "Optimalkan proses HR",
-        desc: "Kelola SDM end-to-end.",
+        title: "Optimize HR processes",
+        desc: "Manage human resources from end-to-end.",
         image: FaUsers,
         points: [
             {
                 title: "Recruitment",
-                desc: "Proses rekrutmen otomatis.",
+                desc: "Automated recruitment and hiring workflows.",
                 icon: FaUserCheck,
             },
             {
                 title: "Payroll",
-                desc: "Payroll & absensi terintegrasi.",
+                desc: "Integrated payroll and attendance systems.",
                 icon: FaMoneyCheckAlt,
             },
             {
                 title: "Performance",
-                desc: "Pantau kinerja karyawan.",
+                desc: "Monitor and track employee performance.",
                 icon: FaChartLine,
             },
         ],
@@ -146,7 +146,7 @@ export default function ERPFeatures() {
         <section className="relative overflow-hidden py-28 px-6 md:px-[10%] bg-gradient-to-b from-[#f9fafb] via-white to-[#fff7f2]">
 
             {/* Soft Radial Background Glow */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,115,0,0.07),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(255,180,0,0.07),transparent_40%)] pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(37,99,235,0.07),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(255,180,0,0.07),transparent_40%)] pointer-events-none" />
 
             {/* Tabs */}
             <div className="hidden lg:flex justify-center mb-16 relative z-10">
@@ -157,8 +157,8 @@ export default function ERPFeatures() {
                             onClick={() => setActive(item.key)}
                             className={`px-6 py-2 rounded-full font-semibold transition-all duration-300
                 ${active === item.key
-                                    ? "bg-orange-600 text-white shadow-md scale-105"
-                                    : "text-gray-600 hover:text-orange-600"
+                                    ? "bg-blue-600 text-white shadow-md scale-105"
+                                    : "text-gray-600 hover:text-blue-600"
                                 }`}
                         >
                             {item.label}
@@ -183,12 +183,12 @@ export default function ERPFeatures() {
                         animate={{ y: [0, -15, 0] }}
                         transition={{ repeat: Infinity, duration: 5 }}
                     >
-                        <HeroIcon className="text-orange-600 text-[200px] drop-shadow-2xl" />
+                        <HeroIcon className="text-blue-600 text-[200px] drop-shadow-2xl" />
                     </motion.div>
 
                     {/* TEXT */}
                     <div>
-                        <h3 className="text-3xl md:text-4xl font-bold mb-4 text-orange-600">
+                        <h3 className="text-3xl md:text-4xl font-bold mb-4 text-blue-600">
                             {current.title}
                         </h3>
                         <p className="text-gray-600 mb-10 text-lg leading-relaxed">
@@ -216,8 +216,8 @@ export default function ERPFeatures() {
                                         }}
                                         className="flex gap-4"
                                     >
-                                        <div className="bg-orange-100 p-3 rounded-xl shadow-sm">
-                                            <Icon className="text-orange-600 text-2xl" />
+                                        <div className="bg-blue-100 p-3 rounded-xl shadow-sm">
+                                            <Icon className="text-blue-600 text-2xl" />
                                         </div>
                                         <div>
                                             <p className="font-semibold text-gray-800">

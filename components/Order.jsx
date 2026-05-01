@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import goToLogin from "@/router/routerHandler";
 import { useRouter } from "next/navigation";
 
 
@@ -13,6 +12,7 @@ export default function ReadyToClaritySection() {
         <section className="relative w-full py-20 px-6 overflow-hidden text-white">
             {/* VIDEO */}
             <video
+                poster="/thumbnail-video.jpg"
                 className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
                 autoPlay
                 loop
@@ -44,7 +44,7 @@ export default function ReadyToClaritySection() {
                     transition={{ duration: 0.6, delay: 0.1 }}
                     className="text-base md:text-lg text-slate-300 max-w-3xl mx-auto mb-10"
                 >
-                    If you are looking for one system with streamlined processes and clear
+                    If you are looking for one system with AI integration, streamlined processes and clear
                     data to support better decisions, let’s talk.
                 </motion.p>
 
@@ -57,10 +57,10 @@ export default function ReadyToClaritySection() {
                 >
                     <button
                         onClick={() => goToLogin(router)}
-                        className="flex items-center gap-2 rounded-full px-6 py-2.5 bg-orange-600 hover:bg-orange-700 transition"
+                        className="flex items-center gap-2 rounded-full px-6 py-2.5 bg-blue-600 hover:bg-blue-700 transition"
                     >
                         Request Free Consultation & Demo
-                        <Image src={assets.right_arrow_white} alt="" className="w-5" />
+                        <Image src={assets.right_arrow_white} alt="Arrow Right" className="w-5" />
                     </button>
                 </motion.div>
             </div>

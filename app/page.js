@@ -5,6 +5,7 @@ import About from "@/components/About";
 import Order from "@/components/Order";
 import Services from "@/components/Services";
 import Contact from "@/components/Contact";
+import Portofolio from "@/components/Portofolio";
 import Footer from "@/components/Footer";
 import ERPFeatures from "@/components/Future";
 import Head from "next/head";
@@ -21,6 +22,7 @@ export default function Home() {
       <About />
       <Order />
       <Services />
+      <Portofolio />
       {/* <Contact /> */}
       <ERPFeatures />
       <Footer />

@@ -59,7 +59,7 @@ export default function ReadyToClaritySection() {
                         onClick={() => window.open("https://wa.me/6281910023976?text=Halo%20J-Tech%20Digital,%20saya%20tertarik%20untuk%20memulai%20proyek...", "_blank")}
                         className="flex items-center gap-2 rounded-full px-6 py-2.5 bg-blue-600 hover:bg-blue-700 transition"
                     >
-                        Request Free Consultation & Demo
+                        Request Free Consultation
                         <Image src={assets.right_arrow_white} alt="Arrow Right" className="w-5" />
                     </button>
                 </motion.div>

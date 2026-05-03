@@ -103,7 +103,7 @@ const Header = () => {
                     {/* ===== CTA ===== */}
                     <motion.div variants={buttonPop} className="mt-10 flex gap-4">
                         <button
-                            onClick={() => goToLogin(router)}
+                            onClick={() => window.open("https://wa.me/6281910023976?text=Halo%20J-Tech%20Digital,%20saya%20tertarik%20untuk%20memulai%20proyek...", "_blank")}
                             className="
                     flex items-center gap-2
                     rounded-full

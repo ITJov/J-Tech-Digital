@@ -12,7 +12,7 @@ const Footer = () => {
                         J-Tech<span className="text-blue-600">Digital</span>
                     </h1>
                     <p className="text-sm text-slate-400 mt-2 max-w-xs">
-                        Elevating Business Through Integrated Digital Solutions. Expert in Laravel, Vue.js, and AI.
+                        Elevating Business Through Integrated Digital Solutions.
                     </p>
                 </div>
 

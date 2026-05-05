@@ -17,7 +17,7 @@ export const metadata = {
   description: "J-Tech Digital is a leading software house in Indonesia, specializing in integrated digital solutions and AI chatbot development. We empower businesses with innovative technology to drive growth and efficiency.",
   keywords: ["J-Tech Digital", "Software House Indonesia", "AI Chatbot Solutions", "Web Development Bandung"],
   icons: {
-    icon: "/J-Tech Digital Logo.png", 
+    icon: "/J-Tech_logo.png", 
   },
   openGraph: {
     title: "J-Tech Digital | Elevating Business Through Technology",

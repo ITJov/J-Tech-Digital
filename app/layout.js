@@ -14,11 +14,14 @@ const ovo = Ovo({
 // app/layout.js atau app/page.js
 export const metadata = {
   title: "J-Tech Digital | Integrated Digital Solutions & AI Expertise",
-  description: "J-Tech Digital menyediakan solusi IT kustom mulai dari Full-Stack Web (Laravel, Vue.js), Mobile Apps (Flutter), hingga integrasi AI dan IoT.",
-  keywords: ["J-Tech Digital", "Software House Indonesia", "Laravel Developer", "AI Chatbot Solutions", "Web Development Jakarta"],
+  description: "J-Tech Digital is a leading software house in Indonesia, specializing in integrated digital solutions and AI chatbot development. We empower businesses with innovative technology to drive growth and efficiency.",
+  keywords: ["J-Tech Digital", "Software House Indonesia", "AI Chatbot Solutions", "Web Development Bandung"],
+  icons: {
+    icon: "/J-Tech Digital Logo.png", 
+  },
   openGraph: {
     title: "J-Tech Digital | Elevating Business Through Technology",
-    description: "Solusi digital terintegrasi untuk bisnis modern.",
+    description: "Digital solutions for your business. We specialize in AI chatbot development and integrated digital solutions to help your business thrive in the digital age.",
     url: "https://jtechdigital.id",
     siteName: "J-Tech Digital",
     images: [

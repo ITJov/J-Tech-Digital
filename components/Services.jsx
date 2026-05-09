@@ -15,7 +15,7 @@ const SERVICES_DATA = [
     {
         icon: <FaCode className="text-blue-600" />,
         title: "Custom Web Development",
-        desc: "High-performance web applications built with Laravel and Vue.js, tailored to your specific business logic."
+        desc: "High-performance web applications tailored to your business needs, built with modern technologies for scalability and security."
     },
     {
         icon: <FaRobot className="text-indigo-600" />,
@@ -25,12 +25,12 @@ const SERVICES_DATA = [
     {
         icon: <FaMobileAlt className="text-cyan-600" />,
         title: "Mobile App Solutions",
-        desc: "Developing cross-platform mobile applications using Flutter for seamless Android and iOS experiences."
+        desc: "Developing cross platform mobile applications for seamless Android and iOS experiences."
     },
     {
         icon: <FaChartLine className="text-emerald-600" />,
-        title: "ERPNext Solutions",
-        desc: "Comprehensive ERPNext implementation and module customization to streamline your corporate operations."
+        title: "Business System Development",
+        desc: "Build systems that optimize your operations, delivering measurable improvements in productivity and decision-making."
     },
     {
         icon: <FaTools className="text-slate-600" />,
@@ -40,7 +40,7 @@ const SERVICES_DATA = [
     {
         icon: <FaHandshake className="text-amber-600" />,
         title: "SaaS Partnership",
-        desc: "Strategic partnership opportunities and revenue-sharing models for scalable software solutions."
+        desc: "Strategic partnership opportunities and revenue sharing models for scalable software solutions."
     }
 ];
 

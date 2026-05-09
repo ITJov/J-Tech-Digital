@@ -24,7 +24,7 @@ export default function Home() {
       <Services />
       <Portofolio />
       {/* <Contact /> */}
-      <ERPFeatures />
+      {/* <ERPFeatures /> */}
       <Footer />
     </>
   );

@@ -198,15 +198,15 @@ const Header = () => {
                                     title="Official Instagram"
                                     desc="Chat via Instagram DM"
                                     action="Mulai"
-                                    href="/#"
+                                    href="https://www.instagram.com/jtechdigital.id/"
                                 />
 
                                 <ContactItem
                                     icon={<FaEnvelope />}
                                     title="Official Email"
-                                    desc="chernojov20@gmail.com"
+                                    desc="jtechnodigital@gmail.com"
                                     action="Kirim"
-                                    href="mailto:chernojov20@gmail.com"
+                                    href="mailto:jtechnodigital@gmail.com"
                                 />
 
                                 <ContactItem

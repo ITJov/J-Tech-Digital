@@ -30,7 +30,7 @@ const About = () => {
                 <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
                     J-Tech Digital is a technology company specializing in creating custom digital solutions for businesses. We combine
                     <strong className="text-slate-900 dark:text-white"> Fullstack Development</strong>, 
-                    <strong className="text-slate-900 dark:text-white"> Artificial Intelligence</strong>, dan 
+                    <strong className="text-slate-900 dark:text-white"> Artificial Intelligence</strong>, and 
                     <strong className="text-slate-900 dark:text-white"> Business Logic</strong> <br />
                     for building integrated systems that streamline operations, enhance customer experience, and drive growth.
                 </p>

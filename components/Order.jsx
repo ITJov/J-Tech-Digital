@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 export default function ReadyToClaritySection() {
     const router = useRouter();
     return (
-        <section className="relative w-full py-20 px-6 overflow-hidden text-white">
+        <section className="relative w-full py-20 px-6 overflow-hidden text-white" id="order">
             {/* VIDEO */}
             <video
                 poster="/thumbnail-video.jpg"
@@ -44,7 +44,7 @@ export default function ReadyToClaritySection() {
                     transition={{ duration: 0.6, delay: 0.1 }}
                     className="text-base md:text-lg text-slate-300 max-w-3xl mx-auto mb-10"
                 >
-                    If you are looking for one system with AI integration, streamlined processes and clear
+                    If you are looking for one system with streamlined processes and clear
                     data to support better decisions, let’s talk.
                 </motion.p>
 

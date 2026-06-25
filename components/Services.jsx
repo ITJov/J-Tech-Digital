@@ -2,99 +2,108 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-    FaCode, 
-    FaRobot, 
-    FaMobileAlt, 
-    FaChartLine, 
-    FaTools, 
-    FaHandshake 
-} from "react-icons/fa";
+// 1. UBAH DARI LuCheckCircle2 MENJADI LuCircleCheck SESUAI REKOMENDASI COMPILER
+import { LuCircleCheck } from "react-icons/lu";
 
-const SERVICES_DATA = [
-    {
-        icon: <FaCode className="text-blue-600" />,
-        title: "Custom Web Development",
-        desc: "High-performance web applications tailored to your business needs, built with modern technologies for scalability and security."
-    },
-    {
-        icon: <FaRobot className="text-indigo-600" />,
-        title: "AI & Automation",
-        desc: "Integrating intelligent chatbots (NLP) and automated workflows to increase your business efficiency."
-    },
-    {
-        icon: <FaMobileAlt className="text-cyan-600" />,
-        title: "Mobile App Solutions",
-        desc: "Developing cross platform mobile applications for seamless Android and iOS experiences."
-    },
-    {
-        icon: <FaChartLine className="text-emerald-600" />,
-        title: "Business System Development",
-        desc: "Build systems that optimize your operations, delivering measurable improvements in productivity and decision-making."
-    },
-    {
-        icon: <FaTools className="text-slate-600" />,
-        title: "Support & Maintenance",
-        desc: "Reliable technical support and system upgrades to ensure your digital infrastructure stays robust."
-    },
-    {
-        icon: <FaHandshake className="text-amber-600" />,
-        title: "SaaS Partnership",
-        desc: "Strategic partnership opportunities and revenue sharing models for scalable software solutions."
-    }
-];
+const BuiltForChallenge = () => {
+    const challengesPoints = [
+        "Proven track record in similar scopes and industries",
+        "Dedicated resources committed for the duration of the project",
+        "Transparent reporting and regular milestone reviews",
+        "Post-launch support and continuous optimization"
+    ];
 
-const Services = () => {
     return (
-        <section id="services" className="w-full px-[10%] py-24 bg-white scroll-mt-20 overflow-hidden">
-            {/* Header Animasi */}
-            <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="text-center mb-16"
-            >
-                <h4 className="text-xl text-blue-600 font-semibold mb-2 uppercase tracking-widest italic">Our Expertise</h4>
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">What We Offer</h2>
-                <div className="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
-            </motion.div>
+        <section 
+            id="services" 
+            className="w-full px-[5%] md:px-[10%] py-24 bg-white dark:bg-slate-950 scroll-mt-20 transition-colors overflow-hidden"
+            aria-labelledby="services-title"
+        >
+            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                {/* Kolom Kiri: Konten Teks & Poin Keunggulan */}
+                <div className="lg:col-span-6 flex flex-col justify-center">
+                    <motion.h2
+                        id="services-title"
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight"
+                    >
+                        Built for This Challenge
+                    </motion.h2>
 
-            {/* Grid Services dengan Staggered Animation */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                {SERVICES_DATA.map((service, index) => (
-                    <ServiceCard
-                        key={index}
-                        index={index}
-                        icon={service.icon}
-                        title={service.title}
-                        desc={service.desc}
-                    />
-                ))}
+                    <motion.p
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-8"
+                    >
+                        When reviewing your requirements, we recognized an opportunity to leverage our core strengths. 
+                        Our approach minimizes risk while maximizing velocity, ensuring you see tangible results faster.
+                    </motion.p>
+
+                    {/* List Poin Berurutan */}
+                    <div className="space-y-4">
+                        {challengesPoints.map((point, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, y: 15 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: idx * 0.1 + 0.2 }}
+                                className="flex items-start gap-4 group"
+                            >
+                                {/* 2. UBAH NAMA KOMPONEN DI SINI JUGA */}
+                                <div className="text-blue-600 dark:text-blue-400 text-xl mt-1 flex-shrink-0 transition-transform group-hover:scale-110">
+                                    <LuCircleCheck aria-hidden="true" />
+                                </div>
+                                <span className="text-slate-700 dark:text-slate-300 font-medium text-base leading-relaxed">
+                                    {point}
+                                </span>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Kolom Kanan: Gambar Utama & Stat Badge Melayang */}
+                <div className="lg:col-span-6 relative w-full flex items-center justify-center lg:justify-end mt-8 lg:mt-0">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="relative rounded-3xl overflow-hidden aspect-[4/3] w-full max-w-[540px] shadow-lg border border-slate-100 dark:border-slate-800"
+                    >
+                        <img 
+                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" 
+                            alt="J-Tech Digital Collaborative Team Meeting" 
+                            className="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-500"
+                            loading="lazy"
+                        />
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                        className="absolute bottom-[-24px] left-4 lg:left-[-12px] p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 max-w-[180px] sm:max-w-[200px]"
+                    >
+                        <span className="block text-4xl sm:text-5xl font-black text-blue-600 dark:text-blue-400 tracking-tight mb-2">
+                            98%
+                        </span>
+                        <p className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-snug">
+                            On time Project Delivery Rate
+                        </p>
+                    </motion.div>
+                </div>
+
             </div>
         </section>
     );
 };
 
-const ServiceCard = ({ icon, title, desc, index }) => {
-    return (
-        <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            whileHover={{ y: -10 }}
-            className="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:border-blue-100 transition-all duration-300"
-        >
-            <div className="flex flex-col items-center text-center">
-                <div className="text-4xl mb-6 p-4 bg-white rounded-2xl shadow-sm group-hover:scale-110 transition-transform">
-                    {icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-slate-900">{title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{desc}</p>
-            </div>
-        </motion.div>
-    );
-};
-
-export default Services;
+export default BuiltForChallenge;

@@ -20,9 +20,9 @@ export default function Home() {
       <Navbar />
       <Header />
       <About />
-      <Order />
       <Services />
-      <Portofolio />
+      <Order />
+      {/* <Portofolio /> */}
       {/* <Contact /> */}
       {/* <ERPFeatures /> */}
       <Footer />

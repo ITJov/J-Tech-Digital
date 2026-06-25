@@ -11,7 +11,7 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
-            const sections = ["top", "about", "services", "portfolio", "contact"];
+            const sections = ["top", "about", "services", "order", "contact"];
             let current = "top";
 
             for (let id of sections) {
@@ -55,7 +55,7 @@ const Navbar = () => {
                                 <li><a data-link href="#top" className="text-gray-500 hover:text-blue-600 transition">Home</a></li>
                                 <li><a data-link href="#about" className="text-gray-500 hover:text-blue-600 transition">About</a></li>
                                 <li><a data-link href="#services" className="text-gray-500 hover:text-blue-600 transition">Services</a></li>
-                                <li><a data-link href="#portfolio" className="text-gray-500 hover:text-blue-600 transition">Portfolio</a></li>
+                                <li><a data-link href="#order" className="text-gray-500 hover:text-blue-600 transition">Contact</a></li>
                             </ul>
                         </div>
                     </div>

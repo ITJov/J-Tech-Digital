@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "about": "Tentang",
+    "services": "Layanan",
+    "order": "Pesan",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "title": "Selamat Datang di J-Tech Digital"
+  }
+}

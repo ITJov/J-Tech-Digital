@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "order": "Order",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Welcome to J-Tech Digital"
+  }
+}
